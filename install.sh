@@ -21,7 +21,7 @@ fi
 # Install sqllite
 if [[ ! -d "/usr/local/Cellar/sqlite" ]]; then
     echo "Installing sqlite"
-    brew install sqlite --with-function --with-secure-delete
+    brew install sqlite
 fi
 
 # Install packages
@@ -34,7 +34,7 @@ do
 done
 
 # Install casks
-for cask in firefox google-chrome iterm2 docker corretto8 intellij-idea-ce visual-studio-code unity-hub unity spectacle itsycal openemu slack zoomus whatsapp;
+for cask in firefox google-chrome iterm2 docker corretto8 intellij-idea-ce visual-studio-code unity-hub unity spectacle slack clickup zoomus gimp alfred love spotify anydesk vanilla vlc;
 do
   if ( brew cask info ${cask} | grep "Not installed" &>/dev/null ); then
     echo "Installing ${cask}"
@@ -43,6 +43,12 @@ do
 done
 
 APPSTORE_APPS=( "462058435 Microsoft Excel (16.40)"
+"1054607607 Helium (2.0)"
+"1339170533 CleanMyMac X (4.6.12)"
+"634148309 Logic Pro X (10.5.1)"
+"1176895641 Spark (2.8.3)"
+"1228059008 ChatMate for WhatsApp (4.3.1)"
+"897118787 Shazam (2.10.0)"
 "682658836 GarageBand (10.3.5)"
 "408981434 iMovie (10.1.15)"
 "409201541 Pages (10.1)"
